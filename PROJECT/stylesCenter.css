@@ -195,6 +195,11 @@ header.show-mobile-menu .navbar .menu-links {
     .navbar .logo {
         font-size: 1.7rem;
     }
+
+    .col3 img {
+        flex: 1;
+        padding-bottom: 20px; 
+    }
 }
 
 
@@ -371,14 +376,23 @@ section .card p {
     padding-bottom: 0px; 
 }
 
+.col3 {
+    flex: 1;
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 0px; 
+    padding-bottom: 0px; 
+}
+
 .text {
     flex-basis: 50%;
-    padding-right: 40px; /* Add space between text and image */
+    padding-right: 20px; /* Add space between text and image */
 }
 
 .image {
     flex-basis: 50%;
-    padding-left: 40px; /* Add space between text and image */
+    padding-left: 20px; /* Add space between text and image */
+    
 }
 
 .image img {
@@ -514,6 +528,7 @@ section .card p {
     footer a {
       height: 0;
     }
+    
   }
 
   @media screen and (max-width: 560px) {
@@ -635,6 +650,9 @@ footer {
     .main-content .box{
       margin: 5px 0;
     }
+    .text {
+        text-align: center; 
+    }
   }
 
 
@@ -686,6 +704,7 @@ footer {
 
     .text-left-image-right .col2.image {
         order: 2;
+
     }
 
     .text-left-image-right .col2.text {
@@ -694,7 +713,8 @@ footer {
 
     /* Also applying similar styling to the previous sections */
     .portfolio .row,
-    .secondPicture .row {
+    .secondPicture .row 
+    {
         flex-direction: column;
     }
 
@@ -708,3 +728,4 @@ footer {
         order: 1;
     }
 }
+
