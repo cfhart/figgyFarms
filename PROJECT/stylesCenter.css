@@ -152,8 +152,15 @@ header.show-mobile-menu .navbar .menu-links {
         padding: 10px; 
     }
 
+    
+
     #close-menu-btn, #menu-btn {
         display: block; 
+    }
+
+    .homepage-section {
+        background-attachment: scroll;
+        background-size: cover;
     }
 
     .navbar .menu-links {
@@ -560,7 +567,6 @@ section .card p {
   }
 
 
-
 /*footer*/
 
 footer {
@@ -728,4 +734,3 @@ footer {
         order: 1;
     }
 }
-
