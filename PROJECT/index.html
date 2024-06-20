@@ -5,8 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="stylesCenter.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>    </head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>    
+        
+    </head>
     <body>
+        <div class="scroll-up-btn">
+            <i class="fas fa-angle-up"></i>
+        </div>
         <header>
             <nav class="navbar container flex">
                 <a href="#" class="logo">Figs<span>.</span></a>
@@ -14,12 +19,33 @@
                 <ul class="menu-links flex">
                     <span id="close-menu-btn" class="material-symbols-outlined">close</span>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Figs</a></li>
-                    <li><a href="#">Leaves</a></li>
-                    <li><a href="#">Tea Leaves</a></li>
-                    <li><a href="#">Purchase</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#purchase">
+                            <button class="dropbtn">Our Products</button>
+                            </a>
+                            <div class="dropdown-content">                                                                                                                                               
+                              <a href="#figs">Figs</a>
+                              <a href="#tea">Tea</a>
+                              <a href="#leaves">Leaves</a>
+                            </div>
+                          </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#purchase">
+                            <button class="dropbtn">Purchase</button>
+                            </a>
+                            <div class="dropdown-content">                                                                                                                                               
+                              <a href="#">Schedule a delivery or pickup</a>
+                              <a href="#">Buy Now</a>
+                              <a href="#">Our Prices and Bulk Deals</a>
+                            </div>
+                          </div>
+                    </li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+                    <li><a href="#">Gallery</a></li>
                 </ul>
 
                 <span id="menu-btn" class="material-symbols-outlined">menu</span>
@@ -32,7 +58,9 @@
             <p>
                 a lot of text omg a kldjsklfkdlf jkdlsjf dlsjkjf kl
             </p>
-            <button>Order Now</button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScW3NKSvS89KtcmNm2YPU9ELJWrR7dtD6gebPlfySpvc4Z5bg/viewform?usp=sf_link">
+                <button>Order Now</button>
+            </a>
         </div>
         </section>
 
@@ -45,37 +73,39 @@
 
                 <ul class="cards flex">
                     <li class="card">
-                        <img src = "images/figTwo.jpg">
-                        <h3>Figs</h3>
-                        <p>idk yet</p>
+                        <a href="#figs">
+                            <img src = "images/figTwo.jpg">
+                            <h3>Figs</h3>
+                            <p>idk yet</p>
+                        </a>
                     </li>
                     <li class="card">
-                        <img src = "images/New Project.jpg">
-                        <h3>Tea Leaves</h3>
-                        <p>Made from fresh fig leaves</p>
+                        <a href="#tea">
+                            <img src = "images/New Project.jpg">
+                            <h3>Tea Leaves</h3>
+                            <p>Made from fresh fig leaves</p>
+                        </a>
                     </li>
                     <li class="card">
-                        <img src = "images/figLeaf.jpg">
-                        <h3>Fresh Leaves</h3>
-                        <p>While in season</p>
+                        <a href="#leaves">
+                            <img src = "images/figLeaf.jpg">
+                            <h3>Fresh Leaves</h3>
+                            <p>While in season</p>
+                        </a>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="portfolio" id="portolio">
+        <section class="figs" id="figs">
             <div class="container">
                 <div class="section-title">
                     <h2>Our Figs</h2>
                     <p>
                         Any order of figs will contain any of three varities: x y and z. 
-                        Add seasonal info. 
+                        Add seasonal info.  fdasdf dsf sda ds sadf a f   adf saf df dsef sfa  
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <div class="container">
+                    <div class="container">
             <div class="slider-wrapper">
               <button id="prev-slide" class="slide-button material-symbols-rounded">
               </button>
@@ -97,97 +127,62 @@
               </div>
             </div>
         </div>
-
-        <section class="portfolio" id="portolio">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Our Tea Leaves</h2>
-                    <p>Our tea leaves are made fresh by order from the leaves of our fig trees.</p>
-                </div>
-                <div class="row">
-                    <div class="col2 text">
-                        <p>
-                            This is a section with the text on the left and an image on the right.
-                        </p>
-                    </div>
-                    <div class="col2 image">
-                        <img src="images/jars.jpg" alt="Image Left">
-                    </div>
                 </div>
             </div>
         </section>
         
-        <section class="portfolio" id="portolio">
+        <section class="tea" id="tea">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Tea Leaves</h2>
+                    <p>Our tea leaves are made fresh by order from the leaves of our fig trees.</p>
+                    <div class="col2 image">
+                        <img src="images/jars.jpg" alt="Image Left">
+                    </div>
+                    <p>
+                        This is a section with the text on the left and an image on the right.
+                    </p>
+                </div>
+                    <div class="col2 text">
+                        
+                    </div>
+                    
+            </div>
+        </section>
+
+        <section class="leaves" id="leaves">
             <div class="container">
                 <div class="section-title">
                     <h2>Our Leaves</h2>
                     <p>Made fresh by order from the leaves of our fig trees.</p>
                 </div>
-                <div class="row">
                     <div class="col3 image">
                         <img src="images/figLeafBackground.jpg" alt="Image Left">
                     </div>
                     <div class="col2 text">
-                        <p> This is where you can tell the story of your business, sharing your journey, values, and mission. 
-                                Engage your visitors with a compelling narrative that highlights the unique aspects of your business 
-                                and what sets you apart from the competition.
+                        <p> Any order of figs will contain any of three varities: x y and z. 
+                            Add seasonal info.  fdasdf dsf sda ds sadf a f   adf saf df dsef sfa 
                         </p>
                     </div>
-                </div>
-            </div>
-        </section>
-        
-    
-
-
-        <section class="banner" id="banner">
-            <div class="container">
-                <div class="row">
-                    <div class="col text">
-                        <h2>Inspirational Quote</h2>
-                    </div>
-                    <div class="col image">
-                        <img src="images/butterflyBackground.jpg" alt="Banner Image">
-                    </div>
-                </div>
             </div>
         </section>
         
         
 
-        <section class="portfolio" id="portfolio">
+        <section class="about" id="about">
             <div class="container">
-                <div class="row">
-                    <div class="col text">
+                    <div class="col2 text">
                         <div class="section-title-left">
                             <h2>Our Story</h2>
-                            <p>
-                                <!-- Your text goes here -->
-                                This is where you can tell the story of your business, sharing your journey, values, and mission. 
-                                Engage your visitors with a compelling narrative that highlights the unique aspects of your business 
-                                and what sets you apart from the competition.
-                            </p>
                         </div>
+                        <p> This is where you can tell the story of your business, sharing your journey, values, and mission. Engage your visitors with a compelling narrative that highlights the unique aspects of your business 
+                            and what sets you apart from the competition.
+                        </p>
                     </div>
                     <div class="col image">
                         <img src="images/figTree.jpg" alt="Our Story Image">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="secondPicture">
-            <div class="container">
-                <div class="row">
-                    <div class="col image">
                         <img src="images/familyPicture.jpg" alt="Image Left">
                     </div>
-                    <div class="col text">
-                        <p>
-                            This is a section with the text on the left and an image on the right.
-                        </p>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -214,7 +209,7 @@
                 <div class="content">
                     <div class="place">
                         <span class="fas fa-map-marker-alt" style="font-size: 20px;"></span>
-                        <span class="textIcons">an address, charlotte</span>
+                        <span class="textIcons">address 1234</span>
                     </div>
                     <div class="phone">
                         <span class="fas fa-phone-alt" style="font-size: 20px;"></span>
@@ -227,7 +222,7 @@
                 </div>
             </div>
 
-            <div class="right box">
+            <div class="right box" id="contact">
                 <h2>Contact Us</h2>
                 <div class="content">
                     <form action="#">
