@@ -185,7 +185,6 @@ header.show-mobile-menu .navbar .menu-links {
     header {
         padding: 10px; 
     }
-
     
 
     #close-menu-btn, #menu-btn {
@@ -199,18 +198,24 @@ header.show-mobile-menu .navbar .menu-links {
 
     .navbar .menu-links {
     position: fixed;
-    left: -260px; 
+    left: -260px;
     top: 0;
-    width: 260px; 
-    height: 100vh; 
-    background: #fff; 
+    width: 260px;
+    height: 100vh;
+    background: #fff;
     flex-direction: column;
-    padding: 70px 40px 0; 
-    }
+    padding: 70px 40px 0;
+    transition: left 0.3s ease;
+}
+
 
     .navbar a {
         color: #000; 
     }
+
+    .dropdown .dropbtn {
+        color: #000; 
+      }
 
     .homepage-section .content {
         text-align: center;
@@ -804,7 +809,6 @@ footer {
     
 }
   
-  
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
@@ -831,3 +835,50 @@ footer {
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+/* Buffer zone to keep dropdown open */
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: transparent;
+  }
+
+  .dropdown-content::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Adjust based on the padding size */
+    left: 0;
+    right: 0;
+    height: 10px; /* Adjust based on the padding size */
+    background: transparent;
+  }
+
+  .dropdown .dropbtn:hover {
+    color: #C06B3E;
+  }
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
