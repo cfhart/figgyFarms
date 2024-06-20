@@ -78,6 +78,39 @@ header .navbar {
     color: #C06B3E;
 }
 
+.figs {
+    padding-top: 40px;
+    padding-bottom: 40px; 
+    background-color: #fff;
+}
+
+.services {
+    padding-top: 40px;
+}
+
+.tea {
+    padding-top: 40px; 
+}
+
+.about {
+    padding-top: 40px;
+}
+
+.leaves {
+    padding-top: 40px;
+    background-color: #fff;
+
+}
+
+.col image {
+    display: center; 
+}
+
+section {
+    scroll-margin-top: 80px; /* Adjust according to the header's height */
+}
+
+
 .homepage-section {
     position: relative; 
     height: 100vh; 
@@ -86,6 +119,7 @@ header .navbar {
     background-position: center 65%;
     background-size: cover;
     background-attachment: fixed;
+    padding-top: 80px;
 }
 
 .homepage-section .content {
@@ -205,16 +239,8 @@ header.show-mobile-menu .navbar .menu-links {
 
     .col3 img {
         flex: 1;
-        padding-bottom: 20px; 
     }
-}
-
-
-
-/** tiles */
-section {
-    padding-top: 80px; 
-}                                                                                   
+}                                                                                
 
 .section-title {
     text-align: center; 
@@ -224,14 +250,16 @@ section h2 {
     font-size: 2rem;
 }
 
-section p {
-    margin-bottom: 50px; 
-}
-
 section .cards {
-    margin-top: 50px; 
     flex-wrap: wrap;
     justify-content: space-between;
+    text-decoration: none;
+}
+
+.cards a {
+    text-decoration: none;
+    color:#000; 
+
 }
 
 section .card {
@@ -372,7 +400,7 @@ section .card p {
 
 .col {
     flex: 1;
-    padding: 20px;
+    padding-left: 20px;
 }
 
 .col2 {
@@ -383,41 +411,46 @@ section .card p {
     padding-bottom: 0px; 
 }
 
+.col2 .text {
+    padding-bottom: 40px; 
+
+}
+
+section p {
+    padding-bottom: 40px; 
+    text-align: center;
+}
 .col3 {
-    flex: 1;
     padding-left: 20px; 
     padding-right: 20px; 
     padding-top: 0px; 
-    padding-bottom: 0px; 
 }
 
 .text {
     flex-basis: 50%;
     padding-right: 20px; /* Add space between text and image */
-}
-
-.image {
-    flex-basis: 50%;
-    padding-left: 20px; /* Add space between text and image */
     
 }
 
 .image img {
     max-width: 100%;
+    padding-left: 20px; 
+    padding-right: 20px; 
+    width: auto; 
+    max-height: 400px;
+    padding-bottom: 40px;
+
+}
+
+.imageLeft img {
+    max-width: 100%;
     height: auto;
     display: block;
-    max-height: 400px; /* Ensure the image scales down to fit the content */
+    max-height: 400px;
 }
 
 .section-title-left {
-    text-align: left; 
-}
-
-.banner {
-    background-color: #02431b; /* Change this to the desired background color */
-    padding: 20px 0; /* Adjust padding for desired banner height */
-    color: #fff; 
-    margin-top: 80px; 
+    align-items: left; 
 }
 
 .banner .row {
@@ -454,6 +487,13 @@ section .card p {
 .text-left-image-right .row {
     align-items: flex-start; /* Align items at the top */
 }
+
+.section-title-left h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+
 
 .text-left-image-right .text {
     flex-basis: 33.33%; /* Text takes up one-third of the width */
@@ -509,7 +549,6 @@ section .card p {
     }
     section .cards .card {
       width: calc(100% / 2 - 15px);
-      margin-bottom: 30px;
     }
     .homepage .content h1 {
       font-size: 40px;
@@ -535,13 +574,17 @@ section .card p {
     footer a {
       height: 0;
     }
+
+    .leaves p {
+        margin-bottom: 20px;
+    }
+    
     
   }
 
   @media screen and (max-width: 560px) {
     section .cards .card {
       width: 100%;
-      margin-bottom: 30px;
     }
   }
 
@@ -567,6 +610,13 @@ section .card p {
   }
 
 
+  .portfolio {
+    padding-top: 40px; 
+    padding-bottom: 40px; 
+  }
+
+ 
+
 /*footer*/
 
 footer {
@@ -580,6 +630,7 @@ footer {
 
 .main-content {
     display: flex; 
+    padding-top: 40px; 
 }
 
 .main-content .box {
@@ -656,24 +707,6 @@ footer {
     .main-content .box{
       margin: 5px 0;
     }
-    .text {
-        text-align: center; 
-    }
-  }
-
-
-  @media screen and (max-width: 860px) {
-    .portfolio .row {
-        flex-direction: column;
-    }
-
-    .portfolio .col.image {
-        order: 2;
-    }
-
-    .portfolio .col.text {
-        order: 1;
-    }
 }
 
 @media screen and (max-width: 860px) {
@@ -688,19 +721,17 @@ footer {
     .secondPicture .col.text {
         order: 1;
     }
-
-    /* Also applying similar styling to the portfolio section */
-    .portfolio .row {
-        flex-direction: column;
+    .text {
+        text-align: center; 
     }
 
-    .portfolio .col.image {
-        order: 2;
+    .leaves .col3.text {
+        order: 1; 
+    }
+    .leaves .col3.image {
+        order: 2; 
     }
 
-    .portfolio .col.text {
-        order: 1;
-    }
 }
 
 @media screen and (max-width: 860px) {
@@ -722,8 +753,25 @@ footer {
     .secondPicture .row 
     {
         flex-direction: column;
+        align-items: center;
+
     }
 
+    .tea .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leaves .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .portfolio .col.image,
     .secondPicture .col.image {
         order: 2;
@@ -734,3 +782,52 @@ footer {
         order: 1;
     }
 }
+
+
+.dropbtn {
+    background-color: #02431b;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 0; 
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    display: block;
+    color: #C06B3E;
+  }
+  
+  .navbar li:hover .dropdown-content {
+    display: block;
+    
+}
+  
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Aligns the dropdown with the bottom of the header */
+}
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
