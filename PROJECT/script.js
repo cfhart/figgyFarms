@@ -68,14 +68,36 @@ window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
 
 const header = document.querySelector("header"); 
-            const menuBtn = document.querySelector("#menu-btn"); 
-            const closeMenuBtn = document.querySelector("#close-menu-btn"); 
+const menuBtn = document.querySelector("#menu-btn"); 
+const closeMenuBtn = document.querySelector("#close-menu-btn"); 
 
-            menuBtn.addEventListener("click", () => {
-                header.classList.toggle("show-mobile-menu"); 
-            }); 
+menuBtn.addEventListener("click", () => {
+    header.classList.toggle("show-mobile-menu"); 
+}); 
 
-            closeMenuBtn.addEventListener("click", () => {
-                menuBtn.click();
-            }); 
+closeMenuBtn.addEventListener("click", () => {
+    menuBtn.click();
+}); 
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
             
